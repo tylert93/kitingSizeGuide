@@ -1,0 +1,82 @@
+html{
+    font-size: 16px;
+}
+
+body{
+    background:#333;
+    color:#fff;
+    width:90%;
+    max-width:36rem;
+    margin:auto;
+    padding-top:3.125rem;
+    font-family: 'Comfortaa', cursive;
+}
+
+label{
+    color:#ff811e;
+}
+
+img{
+    width:9.375rem;
+    margin-right:1.25rem;
+}
+
+.btn-radio{
+    color:#ff811e;
+    border:solid 0.125rem #ff811e;
+}
+
+.selectedWeight, .selectedSpeed, .btn-radio:hover{
+    background-color: #ff811e!important;
+    color:#fff!important;
+}
+
+input[type="number"]{
+    background:#777;
+    color:#fff;
+    border:solid 0.125rem #a9a9a9;
+    border-radius:0.3125rem;
+    width:5rem;
+    padding-left:0.5rem;
+}
+
+#speedInput{
+    background-color:#777!important;
+    border:solid 0.125rem #a9a9a9;
+    height:0.625rem;
+    -webkit-appearance: none;
+}
+
+#speedInput:focus, input[type="number"]:focus{
+    outline:none;
+}
+
+#speedInput::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height:1.125rem;
+    width:1.125rem;
+    border-radius: 50%;
+    background:#ff811e;
+}
+
+#speed-display{
+    font-size:1.2rem;
+}
+
+.result-box{
+    margin:3rem 0 2rem 0;
+}
+
+.result-display{
+    display:inline-block;
+    margin:0.5rem 0 0.5rem 0;
+}
+
+#board-size-display, #kite-size-display{
+    font-weight:bold;
+    font-size:1.2rem;
+}
+
+h1{
+    font-size:2rem;
+}
