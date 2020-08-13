@@ -1,14 +1,15 @@
 document.addEventListener("DOMContentLoaded", () =>{
     
-    var weightButtons = document.querySelectorAll(".weight-unit");
-    var speedButtons = document.querySelectorAll(".speed-unit");
-    var speedDisplay = document.querySelector("#speed-display");
-    var speedInput = document.querySelector("#speedInput");
-    var weightInput = document.querySelector("#weightInput");
-    var kiteSizeDisplay = document.querySelector("#kite-size-display")
-    var boardSizeDisplay = document.querySelector("#board-size-display")
-    var weightUnitFactor = 1;
-    var speedUnitFactor = 1;
+    const weightButtons = document.querySelectorAll(".weight-unit"),
+          speedButtons = document.querySelectorAll(".speed-unit"),
+          speedDisplay = document.querySelector("#speed-display"),
+          speedInput = document.querySelector("#speedInput"),
+          weightInput = document.querySelector("#weightInput"),
+          kiteSizeDisplay = document.querySelector("#kite-size-display"),
+          boardSizeDisplay = document.querySelector("#board-size-display");
+
+    let weightUnitFactor = 1,
+        speedUnitFactor = 1;
 
     calcKiteSize();
     calcBoardSize();
@@ -17,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () =>{
 
         item.addEventListener("click", function(){
 
-            var previousWeightUnit = document.querySelector(".selectedWeight").getAttribute("unit");
-            var currentWeightUnit = this.getAttribute("unit");
+            let previousWeightUnit = document.querySelector(".selectedWeight").getAttribute("unit"),
+                currentWeightUnit = this.getAttribute("unit");
 
             weightButtons.forEach(function(item){
                 item.classList.remove("selectedWeight");
@@ -43,8 +44,8 @@ document.addEventListener("DOMContentLoaded", () =>{
     speedButtons.forEach(function(item){
         item.addEventListener("click", function(){
 
-            var previousSpeedUnit = document.querySelector(".selectedSpeed").getAttribute("unit");
-            var currentSpeedUnit = this.getAttribute("unit");
+            let previousSpeedUnit = document.querySelector(".selectedSpeed").getAttribute("unit"),
+                currentSpeedUnit = this.getAttribute("unit");
 
             speedButtons.forEach(function(item){
                 item.classList.remove("selectedSpeed");
@@ -108,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     }
 
     function calcBoardSize(){
-        var weight = weightInput.value * weightUnitFactor;
+        let weight = weightInput.value * weightUnitFactor;
 
         if(weight < 68){
             boardSizeDisplay.innerHTML = "130 - 140 cm";
